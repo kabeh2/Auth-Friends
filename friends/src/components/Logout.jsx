@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
-import { logout } from "../services/authService";
+import { connect } from "react-redux";
+import { logout } from "../store/actions/actionCreators";
 
-function Logout() {
+function Logout({ logout }) {
   useEffect(() => {
     logout();
-  }, []);
+  }, [logout]);
 
   return <div>LOGGED OUT!</div>;
 }
 
-export default Logout;
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+
+export default connect(null, mapDispatchToProps)(Logout);
