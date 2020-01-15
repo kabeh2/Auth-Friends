@@ -1,11 +1,13 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import MyTextInput from "./textInput";
-import authService, { login } from "../services/authService";
 import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import MyTextInput from "./textInput";
+import authService from "../services/authService";
+import { login } from "../store/actions/actionCreators";
 
-function LoginForm({ location, history }) {
+function LoginForm({ location, history, login }) {
   if (authService.getToken()) return <Redirect to="/" />;
 
   return (
@@ -30,8 +32,9 @@ function LoginForm({ location, history }) {
             await login(values);
             resetForm({});
             setStatus({ success: true });
-            const { state } = location;
-            history.replace(state ? location.state.from.pathname : "/");
+            history.replace(
+              location.state ? location.state.from.pathname : "/"
+            );
             // window.location = state ? state.from.pathname : "/";
           } catch (error) {
             setStatus({ success: false });
@@ -61,4 +64,8 @@ function LoginForm({ location, history }) {
   );
 }
 
-export default LoginForm;
+const mapDispatchToProps = dispatch => ({
+  login: credentials => dispatch(login(credentials))
+});
+
+export default connect(null, mapDispatchToProps)(LoginForm);

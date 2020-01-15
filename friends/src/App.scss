@@ -1,0 +1,16 @@
+button {
+  padding: 8px 16px;
+  background-color: dodgerblue;
+  color: #fff;
+
+  border-radius: 4px;
+  margin-left: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgb(20, 103, 187);
+  }
+}
