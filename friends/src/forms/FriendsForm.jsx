@@ -16,8 +16,11 @@ function FriendsForm({
   updateFriends
 }) {
   const [updateMsg] = useState(match.params.id);
+
+  // If not logged in, page inaccessible
   if (!authService.getToken()) return <Redirect to="/" />;
 
+  // If updating, filter specific user and use as initial values
   let friendsCopy = friends.filter(friend => friend.id === +updateMsg);
 
   return (
@@ -44,7 +47,6 @@ function FriendsForm({
           { setSubmitting, setErrors, setStatus, resetForm }
         ) => {
           try {
-            //   console.log(values);
             friendsCopy[0]
               ? updateFriends(friendsCopy[0].id, values)
               : addFriends(values);
@@ -53,7 +55,6 @@ function FriendsForm({
             history.replace(
               location.state ? location.state.from.pathname : "/friends"
             );
-            // window.location = state ? state.from.pathname : "/";
           } catch (error) {
             setStatus({ success: false });
             setSubmitting(false);
