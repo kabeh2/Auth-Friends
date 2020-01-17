@@ -11,7 +11,7 @@ function LoginForm({ location, history, login }) {
   if (authService.getToken()) return <Redirect to="/" />;
 
   return (
-    <div>
+    <div className="columns is-centered">
       <Formik
         initialValues={{
           username: "",
@@ -43,21 +43,26 @@ function LoginForm({ location, history, login }) {
           }
         }}
       >
-        <Form>
-          <MyTextInput
-            label="Username"
-            name="username"
-            type="text"
-            placeholder="Username..."
-          />
-          <MyTextInput
-            label="Password"
-            name="password"
-            type="password"
-            placeholder="Password..."
-          />
+        <Form className="card column is-two-fifths">
+          <div className="card-content">
+            <h1 className="title has-text-centered has-text-primary">Login</h1>
+            <MyTextInput
+              label="Username"
+              name="username"
+              type="text"
+              placeholder="Username..."
+            />
+            <MyTextInput
+              label="Password"
+              name="password"
+              type="password"
+              placeholder="Password..."
+            />
 
-          <button type="submit">Submit</button>
+            <button type="submit" className="button is-primary">
+              Submit
+            </button>
+          </div>
         </Form>
       </Formik>
     </div>
