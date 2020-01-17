@@ -27,10 +27,20 @@ function Navbar({ loggedIn }) {
 
           <div className="navbar-menu">
             <div className="navbar-start">
-              <NavLink to="/" className="navbar-item">
+              <NavLink
+                to="/"
+                className="navbar-item"
+                activeClassName="navlink-active"
+                exact
+              >
                 Home
               </NavLink>
-              <NavLink to="/friends" className="navbar-item">
+              <NavLink
+                to="/friends"
+                className="navbar-item"
+                activeClassName="navlink-active"
+                exact
+              >
                 Friends
               </NavLink>
             </div>

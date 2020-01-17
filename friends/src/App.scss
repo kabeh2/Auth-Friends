@@ -8,8 +8,17 @@
 @import "../node_modules/bulma/sass/elements/table.sass";
 @import "../node_modules/bulma/sass/components/navbar.sass";
 
+$new-primary: hsl(171, 100%, 41%);
+
 a {
   text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    // font-weight: bold;
+    color: hsl(0, 0%, 96%) !important;
+    background-color: $new-primary !important;
+  }
 }
 
 li {
@@ -34,6 +43,12 @@ li {
 .navbar-brand {
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.navlink-active {
+  color: $new-primary !important;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .cancel-btn {
