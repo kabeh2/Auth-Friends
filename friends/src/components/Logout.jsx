@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { logout } from "../store/actions/actionCreators";
+import { Redirect } from "react-router-dom";
 
 function Logout({ logout }) {
-  useEffect(() => {
-    logout();
-  }, [logout]);
+  logout();
 
-  return <div>LOGGED OUT!</div>;
+  return (
+    <div>
+      <Redirect to="/" />
+    </div>
+  );
 }
 
 const mapDispatchToProps = dispatch => ({
