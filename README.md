@@ -1,7 +1,5 @@
 ### View My Completed Work: https://kabeh2.github.io/Auth-Friends/
 
-**_ Node Not connected to Server yet so CRUD functionality will not be displayed here. Check code for implementation. _**
-
 # Auth Friends
 
 Topics:
