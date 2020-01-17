@@ -1,3 +1,5 @@
+### View My Completed Work: https://kabeh2.github.io/Auth-Friends/
+
 # Auth Friends
 
 Topics:
@@ -54,6 +56,8 @@ Topics:
   email: 'joe@lambdaschool.com',
 }
 ```
+
+<<<<<<< HEAD
 
 - [x] If you'd like, you can create multiple "view" components for your routes. You could have a component who's sole purpose is to render the login form; one for a form for updating a user; another component who's sole purpose is for creating users; and then another component who's sole purpose is to delete a user.
 - [x] It really is up to you how you build this project. I suggest writing down the flow you want to follow, and then writing down each individual piece you need for each step in the flow so that this process doesn't feel as overwhelming.
