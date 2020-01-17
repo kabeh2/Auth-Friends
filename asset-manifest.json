@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Auth-Friends/static/css/main.107cce36.chunk.css",
+    "main.js": "/Auth-Friends/static/js/main.5921bc7f.chunk.js",
+    "main.js.map": "/Auth-Friends/static/js/main.5921bc7f.chunk.js.map",
+    "runtime-main.js": "/Auth-Friends/static/js/runtime-main.c6fb2204.js",
+    "runtime-main.js.map": "/Auth-Friends/static/js/runtime-main.c6fb2204.js.map",
+    "static/js/2.bc933508.chunk.js": "/Auth-Friends/static/js/2.bc933508.chunk.js",
+    "static/js/2.bc933508.chunk.js.map": "/Auth-Friends/static/js/2.bc933508.chunk.js.map",
+    "index.html": "/Auth-Friends/index.html",
+    "precache-manifest.52769addbfdfdf566a09ad829f3a6bf7.js": "/Auth-Friends/precache-manifest.52769addbfdfdf566a09ad829f3a6bf7.js",
+    "service-worker.js": "/Auth-Friends/service-worker.js",
+    "static/css/main.107cce36.chunk.css.map": "/Auth-Friends/static/css/main.107cce36.chunk.css.map",
+    "static/js/2.bc933508.chunk.js.LICENSE": "/Auth-Friends/static/js/2.bc933508.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6fb2204.js",
+    "static/js/2.bc933508.chunk.js",
+    "static/css/main.107cce36.chunk.css",
+    "static/js/main.5921bc7f.chunk.js"
+  ]
+}
